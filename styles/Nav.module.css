@@ -1,0 +1,17 @@
+.nav {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.navItems {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.navItems > li {
+  margin-right: 20px;
+  font-size: 18px;
+  color: var(--dark-blue-grey);
+}

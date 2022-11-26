@@ -1,0 +1,11 @@
+.ctaButton {
+  height: 36px;
+  margin: 52px 0 0;
+  padding: 8px 134px 8px 135px;
+  border-radius: 4px;
+  border: solid 1px var(--dark-sky-blue);
+  background-color: var(--dark-sky-blue);
+  color: #fff;
+  font-family: MarkPro;
+  cursor: pointer;
+}

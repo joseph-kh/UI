@@ -1,26 +1,100 @@
+:root {
+  --dark-blue-grey: #1f2a4b;
+  --cool-grey: #9ea3b2;
+  --cool-grey-two: #a1a4ad;
+  --silver: #d7dae0;
+  --dark-sky-blue: #4a77e5;
+}
+
+@font-face {
+  font-family: "MarkPro";
+  src: url("/fonts/Mark-Pro.ttf");
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: MarkPro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.have-account-cta {
+  font-family: MarkPro;
+  margin-top: 5px;
+  font-size: 14px;
+  color: var(--dark-blue-grey);
+  text-decoration: underline;
+}
+
+.is-loading {
+  pointer-events: none;
+  position: relative;
+}
+
+.is-loading:before {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+.is-loading:after {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 3px solid var(--dark-sky-blue);
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 3em;
+  position: relative;
+  width: 3em;
+  left: 50%;
+  margin-left: -1.5em;
+  margin-top: -1.5em;
+  position: absolute;
+  top: 50%;
+  position: absolute !important;
+  z-index: 9999;
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  body {
-    color: white;
-    background: black;
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
